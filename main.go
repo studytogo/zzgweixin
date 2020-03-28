@@ -24,7 +24,7 @@ func makeSignature(timestamp, nonce string) string { //本地计算signature
 }
 
 func validateUrl(w http.ResponseWriter, r *http.Request) bool {
-	fmt.Println("--------------------------------", r.Form["FromUserName"])
+	fmt.Println("--------------------------------", r.RequestURI)
 
 	timestamp := strings.Join(r.Form["timestamp"], "")
 	nonce := strings.Join(r.Form["nonce"], "")
